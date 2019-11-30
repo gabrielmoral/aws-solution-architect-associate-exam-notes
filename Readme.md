@@ -1,0 +1,28 @@
+-   *IAM
+-   *S3
+-   *Storage gateway
+-   *EC2
+-   *EBS
+-   *CloudWatch
+-   *CloudTrail
+-   *EFS
+-   *RDS
+-   *Aurora
+-   *DynamoDb
+-   *Elasticache
+-   *Redshift
+-   *Route53
+-   *VPC
+-   *HA Architecture
+-   *Load Balancers
+-   *Autoscaling groups
+-   *CloudFormation
+-   *Elastic Beanstalk
+-   *SQS
+-   *SNS
+-   *SWF
+-   *ElasticTranscoder
+-   *API Gateway
+-   *Kinesis
+-   *Cognito 
+-   *Lambda
