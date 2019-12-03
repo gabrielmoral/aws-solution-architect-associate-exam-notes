@@ -1,5 +1,5 @@
 #### CloudFormation
 
-It is a way of completely scripting your cloud environment.
+It is a way of scripting your cloud environment infrastructure.
 
-Quick Start is a bunch of CloudFormation templates already built by AWS allowing you to create complex environments very quickly. 
+Quick Start is a bunch of CloudFormation templates already built by AWS allowing you to create complex environments very quickly.

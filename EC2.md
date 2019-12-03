@@ -10,11 +10,11 @@ Pricing types:
 Fixed rate by the hour or second with no commitment.
 
 **Reserved**
-Offers capacity reservation and offers a significant discount on the hourly charge. Contract terms are 1 Year or 3 Year Terms. There is a market where you can sell reserved instances that you do not want.
+Offers capacity reservation and offers a significant discount on the hourly charge. Contract terms are 1 Year or 3 Year Terms. There is a market where you can sell reserved instances that you do not want. 
+Capacity reservation can be purchased on a daily, weekly, or monthly basis, with an specified time and duration, for a one-year term.
 
-**Spot**
+**Spot** 
 Enables you to bid whatever price you want for instance capacity, providing greater saving if you app have flexible start and end times.
-
 If the spot instance is terminated, you won't be charged for a partial hour of usage. However, if you terminate the instance yourself, you will be charged for any hour in which the instance ran.
 
 **Dedicated hosts**
@@ -35,18 +35,17 @@ They run when an EC2 instance first boots.
 It is a powerful way of automating software installs and updates.
 
 **Instance metadata**
-Used to get information about an instance (such as public ip)
-http://169.254.169.254/latest/meta-data/
+Used to get information about an instance (such as public ip) http://169.254.169.254/latest/meta-data/
 http://169.254.169.254/latest/user-data/ (bootstrap data)
 
 **EC2 Placement Groups**
 It is how you place your EC2 instances.
 
--   Clustered placement group.
+- Clustered placement group.
     Low network latency / High network throughput. Same instances in the same AZ.
--   Spread placement group.
+- Spread placement group.
     Individual critical EC2 instances. Different AZ, different pieces of hardware.
--   Partitioned
+- Partitioned
     Multiple EC2 instances into a partition and each partition in separate hardware and racks.
 
 The name for the placement group must be unique in your AWS account.
@@ -54,3 +53,11 @@ The name for the placement group must be unique in your AWS account.
 Only certain types of instances can be launched in a placement group.
 
 You can't merge placement groups and you can't move existing instances into a placement group.
+
+**Elastic IP**
+
+An Elastic IP address doesn’t incur charges as long as the following conditions are true:
+
+- The Elastic IP address is associated with an Amazon EC2 instance.
+- The instance associated with the Elastic IP address is running.
+- The instance has only one Elastic IP address attached to it.

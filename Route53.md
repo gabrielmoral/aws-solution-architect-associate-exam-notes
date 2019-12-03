@@ -1,11 +1,9 @@
 #### Route53
 
-ELB do not have pre-defined IPv4 addresses; you resolve them using a DNS name.
-
 **DNS types**
 
 SOA Records
-When you buy a domain every DNS address being with SOA records. It stores information about name of the server that supply the data for the zone, the administrator of the zone, the current version of the data file and the default seconds of TTL file on resource records.
+It stores information about name of the server that supply the data for the zone, the administrator of the zone, the current version of the data file and the default seconds of TTL file on resource records.
 
 NS Records
 They are used by Top Level Domain servers to direct traffic to the Content DNS server which contains the authoritative DNS records.

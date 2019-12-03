@@ -2,9 +2,9 @@
 
 It consists of IGW (or Virtual Provate Gateways), Route Tables, Network Acess Control Lists (NACL), Subnets and Security groups.
 
-When you create a VPC, by default ot creates a Route table, a NACL and a Security Group associated. It won't create any subnets nor IGW.
+When you create a VPC, by default it creates a Route table, a NACL and a Security Group associated. It won't create any subnets nor IGW.
 
-Only 1 IGW per VPC
+Only 1 IGW per VPC.
 
 Amazon always reserves 5 IP adresses within your subnets.
 
@@ -19,7 +19,7 @@ Minimum of two public subnets to deploy an internet ELB.
 **VPC Flow Logs**
 Logs traffic for the VPC.
 After creation you cannot change its configuration.
-Not all IP traffic is monitored. (Windows license activation, Traffic from 169.254.169.254, DHCP traffic, reserved Ip addresses traffic)
+Not all IP traffic is monitored (Windows license activation, Traffic from 169.254.169.254, DHCP traffic, reserved Ip addresses traffic)
 
 **NAT instances**
 Used to provide internet instance in private subnets.
@@ -37,7 +37,12 @@ No need to patch.
 Not associated with security groups.
 Automatically assigned a public ip address.
 It must have a route out to the internet in the private subnet route table.
-To create an AZ indenpendent architecture, create a NAT gateway in each AZ to avoid multiples AZ going to the same NAT gateway in case of NAT Gateway being down. 
+To create an AZ indenpendent architecture, create a NAT gateway in each AZ to avoid multiples AZ going to the same NAT gateway in case of NAT Gateway being down.
+
+NAT gatewayes are billed:
+
+- A cost per hour.
+- All traffic processed, regardless of it's direction.
 
 **Network ACL's**
 They contain a numbered list of rules that are evaluated in order.
@@ -49,7 +54,7 @@ It is possible block IP addresses with NACL.
 A NACL can be associated with multiple subnets; however a subnet can only be associated with one NACL.
 
 **Bastion (or jump box)**
-It is a host to connect through instances in privates subnets.
+It is a host to connect with instances in privates subnets.
 
 **Direct connect**
 It connects directly your data center to AWS.
@@ -60,11 +65,11 @@ A VPC endpoint enables you to privately connect your VPC to supported AWS servic
 They are virtual devices, horizontally scaled, redundant and highly available.
 Two types of VPC endpoints:
 
--   Interface Endpoints.
--   Gateway Endpoints
-    -   Amazon S3
-    -   DynamoDB
+- Interface Endpoints.
+- Gateway Endpoints
+  - Amazon S3
+  - DynamoDB
 
+**Egress-only Internet gateway**
 
-
-
+It allows outbound communication over IPv6 from your instances in your VPC to the Internet. It blocks the Internet from initiating an IPv6 connection with your instances.

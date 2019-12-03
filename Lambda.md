@@ -4,17 +4,12 @@ AWS Lambda is a compute service where you can upload your code and create a Lamb
 
 You don't have to worry about operating systems, patching, scaling, etc.
 
-It scales out automatically.
-
-It is serverless.
-
-Lambda functions can trigger other functions.
-
-AWS X-ray allows you to debug what is happening.
-
-Function timeout is 15 minutes.
-
-Can be executed synchronously or asynchronously.
+- It scales out automatically.
+- It is serverless.
+- Lambda functions can trigger other functions.
+- AWS X-ray allows you to debug what is happening.
+- Function timeout is 15 minutes.
+- Can be executed synchronously or asynchronously.
 
 **Serverless services**
 
